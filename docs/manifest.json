@@ -2,7 +2,7 @@
   "name": "PaidMailsReader",
   "short_name": "PMR",
   "icons": [{
-        "src": "/img/192.png",
+        "src": "/pmr-key-server/img/192.png",
         "sizes": "192x192",
         "type": "image/png"
       }],
