@@ -28,3 +28,5 @@ npm install
 ```bash
 npm start
 ```
+
+Для работы программы введите ключ `F1Z6S3L9Z4K9J3W9Z6K7D9B1A5G8`
