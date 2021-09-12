@@ -2,9 +2,7 @@
 
 ## Установка
 
-Скачать последнюю версию [Node.js](https://nodejs.org/ru/)
-
-Скачать последнюю версию [Git](https://git-scm.com/)
+Скачать и установить последнии версии [Node.js](https://nodejs.org/ru/) и [Git](https://git-scm.com/)
 
 Открыть консоль Windows и выполнить команды
 
@@ -28,5 +26,9 @@ npm install
 ```bash
 npm start
 ```
+
+Для проверки работы сервера, перейдите по [ссылке](http://pmr.kas-cor.ru)
+
+Если все сделано верно, вы увидите `Key server PMR is running...`
 
 Для работы программы введите ключ `F1Z6S3L9Z4K9J3W9Z6K7D9B1A5G8`
