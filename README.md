@@ -7,7 +7,7 @@
 Открыть консоль Windows и выполнить команды
 
 ```bash
-git clone https://github.com/paidmailsreader/paidmailsreader.git
+git clone https://github.com/paidmailsreader/paidmailsreader.github.io.git
 cd pmr-key-server
 npm install
 ```
