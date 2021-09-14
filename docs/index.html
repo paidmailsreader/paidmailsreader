@@ -141,10 +141,10 @@
                         друг от друга.
                     </li>
                 </ul>
-                <center>
+                <div style="text-align: center;">
                     <a href="/img/scr/pmr.png" target="_blank"><img src="/img/scr/pmr.png" width="565" height="412" class="img-responsive"></a><br/>
-                </center>
-                <center>
+                </div>
+                <div style="text-align: center;">
                     <b>Другие скриншоты:</b><br/>
                     <a target="_blank" href="/img/scr/stt_svr.png">Настройка почтового сервера</a> |
                     <a target="_blank" href="/img/scr/stt_spr.png">Настройка спонсора</a><br/>
@@ -153,24 +153,29 @@
                     <a target="_blank" href="/img/scr/get_ptc.png">Сбор PTC ссылок</a> |
                     <a target="_blank" href="/img/scr/read_mail.png">Чтение почты</a> |
                     <a target="_blank" href="/img/scr/stt_grp.png">Группы приоритетов</a>
-                </center>
+                </div>
                 <br/>
-                <center><b>Новое в версии 1.6.8 (Май 2008)</b></center>
+                <div style="text-align: center;"><b>Новое в версии 1.6.8 (Май 2008)</b></div>
                 <span class="text-left">
-    * Возможность использовать несколько условных фраз для любого спонсора;<br/>
-    * В меню программы добавлены две новые команды, &quot;Проверка на ошибки&quot; и &quot;FAQ (Быстрые ответы)&quot;;<br/>
-    * При просмотре лога с ошибками, можно показывать только важные;
-    <center><b>Исправлены ошибки</b></center>
-    * При автовходе на последнем этапе, программа задерживалась на время таймаута;<br/>
-    * В некоторых случаях не появлялось меню групп приоритетов;<br/>
-    * При команде &quot;Сбор РТС ссылок&quot; из трея, сбор происходил не в скрытом окне;<br/>
-    * Исправлены мелкие ошибки;
-</span>
+                    * Возможность использовать несколько условных фраз для любого спонсора;<br/>
+                    * В меню программы добавлены две новые команды, &quot;Проверка на ошибки&quot; и &quot;FAQ (Быстрые ответы)&quot;;<br/>
+                    * При просмотре лога с ошибками, можно показывать только важные;
+                    <div style="text-align: center;"><b>Исправлены ошибки</b></div>
+                    * При автовходе на последнем этапе, программа задерживалась на время таймаута;<br/>
+                    * В некоторых случаях не появлялось меню групп приоритетов;<br/>
+                    * При команде &quot;Сбор РТС ссылок&quot; из трея, сбор происходил не в скрытом окне;<br/>
+                    * Исправлены мелкие ошибки;
+                </span>
                 <br/><br/>
-                <center>Сейчас вы можете <b>совершенно бесплатно</b>, скачать нашу программу</center>
-                <h3 class="text-center"><a target="_blank" href="https://drive.google.com/file/d/1dcQenP9RwjBUmq7NYP-T3nXLaSt8E02p/view?usp=sharing">Скачать (2
-                    179.30 КБ)</a></h3>
-                <h4 class="text-center">Готовые настройки спонсоров для импорта <a target="_blank" href="https://drive.google.com/file/d/1BYqRsWB0-aaaYaadiHXGbXAwZrWNozU4/view?usp=sharing">Скачать</a>
+                <div style="text-align: center;">
+                    Сейчас вы можете <b>совершенно бесплатно</b>, скачать нашу программу
+                </div>
+                <h3 class="text-center">
+                    <a target="_blank" href="https://drive.google.com/file/d/1dcQenP9RwjBUmq7NYP-T3nXLaSt8E02p/view?usp=sharing">Скачать
+                        (2
+                        179.30 КБ)</a></h3>
+                <h4 class="text-center">Готовые настройки спонсоров для импорта
+                    <a target="_blank" href="https://drive.google.com/file/d/1BYqRsWB0-aaaYaadiHXGbXAwZrWNozU4/view?usp=sharing">Скачать</a>
                 </h4>
                 <h3 class="text-center"><b>Видео с примерами работы программы</b></h3>
                 <h4 class="text-center">
@@ -185,7 +190,8 @@
                 <br/>
                 <br/>
                 <h4 class="text-center">
-                    <a href="https://github.com/paidmailsreader/paidmailsreader.github.io" target="_blank">Инструкция по установке сервера ключей</a>
+                    <a href="https://github.com/paidmailsreader/paidmailsreader.github.io" target="_blank">Инструкция по
+                        установке сервера ключей</a>
                 </h4>
                 <br/>
                 <br/>
@@ -267,39 +273,35 @@
 <!-- /Yandex.Metrika counter -->
 
 <script>
-    // 17.05.2022
-    const exp_date = new Date();
-    CountDownTimer('05/17/2022 00:00 AM', 'exp');
-
-    function CountDownTimer(dt, id)
-    {
-        var end = new Date(dt);
-
-        var _second = 1000;
-        var _minute = _second * 60;
-        var _hour = _minute * 60;
-        var _day = _hour * 24;
-        var timer;
+    function CountDownTimer(dt) {
+        const end = new Date(dt);
+        const _second = 1000;
+        const _minute = _second * 60;
+        const _hour = _minute * 60;
+        const _day = _hour * 24;
+        let timer;
 
         function showRemaining() {
-            var now = new Date();
-            var distance = end - now;
+            const now = new Date();
+            const distance = end - now;
             if (distance < 0) {
-                clearInterval(timer);
+                window.clearInterval(timer);
                 $(".exp").hide();
                 return;
             }
-            var days = Math.floor(distance / _day);
-            var hours = Math.floor((distance % _day) / _hour);
-            var minutes = Math.floor((distance % _hour) / _minute);
-            var seconds = Math.floor((distance % _minute) / _second);
+            const days = Math.floor(distance / _day);
+            const hours = Math.floor((distance % _day) / _hour);
+            const minutes = Math.floor((distance % _hour) / _minute);
+            const seconds = Math.floor((distance % _minute) / _second);
 
-            $(".exp span").html(days + ' д. ' + hours + ' час. ' + minutes + ' мин. ' + seconds + ' сек.');
+            $(".exp span").html(days + ' дн. ' + hours + ' час. ' + minutes + ' мин. ' + seconds + ' сек.');
             $(".exp").show();
         }
 
-        timer = setInterval(showRemaining, 1000);
+        timer = window.setInterval(showRemaining, 1000);
     }
+
+    CountDownTimer('05/17/2022 00:00 AM');
 </script>
 <!-- .Codes -->
 
