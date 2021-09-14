@@ -189,6 +189,10 @@
                 </h4>
                 <br/>
                 <br/>
+                <h4 class="text-center exp" style="display: none">
+                    Домен paidmailsreader.ru будет отключен через <span></span><br/>
+                    Эта страница будет доступна по адресу paidmailsreader.github.io
+                </h4>
             </div>
             <!-- .Content -->
         </div>
@@ -222,11 +226,10 @@
         a.src = g;
         m.parentNode.insertBefore(a, m)
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
     ga('create', 'UA-7587727-6', 'auto');
     ga('send', 'pageview');
-
 </script>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {
@@ -262,6 +265,42 @@
     <div><img src="https://mc.yandex.ru/watch/35981665" style="position:absolute; left:-9999px;" alt=""/></div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
+
+<script>
+    // 17.05.2022
+    const exp_date = new Date();
+    CountDownTimer('05/17/2022 00:00 AM', 'exp');
+
+    function CountDownTimer(dt, id)
+    {
+        var end = new Date(dt);
+
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
+
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
+                clearInterval(timer);
+                $(".exp").hide();
+                return;
+            }
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+
+            $(".exp span").html(days + ' д. ' + hours + ' час. ' + minutes + ' мин. ' + seconds + ' сек.');
+            $(".exp").show();
+        }
+
+        timer = setInterval(showRemaining, 1000);
+    }
+</script>
 <!-- .Codes -->
 
 </body>
