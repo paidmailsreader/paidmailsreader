@@ -8,7 +8,7 @@
 
 ```bash
 git clone https://github.com/paidmailsreader/paidmailsreader.github.io.git
-cd pmr-key-server
+cd paidmailsreader.github.io
 npm install
 ```
 
@@ -32,3 +32,30 @@ npm start
 Если все сделано верно, вы увидите `Key server PMR is running...`
 
 Для работы программы введите ключ `F1Z6S3L9Z4K9J3W9Z6K7D9B1A5G8`
+
+## Запуск сервера как сервиса в фоне
+
+```bash
+npm install -g qckwinsvc
+qckwinsvc
+```
+
+В консоле будет запрошено Имя сервиса, описание и путь до скрипта
+
+```bash
+Service name: [Имя сервиса, например pmr]
+Service description: [Описание сервиса, например pmr-key-server]
+Node script path: [Путь до скрипта, например C:\Users\User\paidmailsreader.github.io\server.js]
+```
+
+### Запуск сервиса
+
+```bash
+net start pmr
+```
+
+### Остановка сервиса
+
+```bash
+net stop pmr
+```
