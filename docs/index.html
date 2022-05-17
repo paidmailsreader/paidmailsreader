@@ -211,12 +211,6 @@
                     <a href="https://github.com/paidmailsreader/paidmailsreader.github.io" target="_blank">Инструкция по
                         установке сервера ключей</a>
                 </h4>
-                <br/>
-                <br/>
-                <h4 class="text-center exp" style="display: none">
-                    Домен paidmailsreader.ru будет отключен через <span></span><br/>
-                    Эта страница будет доступна по адресу paidmailsreader.github.io
-                </h4>
             </div>
             <!-- .Content -->
         </div>
@@ -229,7 +223,7 @@
 <div class="footer footer-ground">
     <div class="container">
         <div class="col-md-10"></div>
-        <div class="col-md-2 developer"><br/><small>Developer kas-cor<br/>2005-2021</small></div>
+        <div class="col-md-2 developer"><br/><small>Developer kas-cor<br/>2005-2022</small></div>
     </div>
 </div>
 <!-- .Footer -->
@@ -273,38 +267,6 @@
     <div><img src="https://mc.yandex.ru/watch/35981665" style="position:absolute; left:-9999px;" alt=""/></div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
-
-<script>
-    function CountDownTimer(dt) {
-        const end = new Date(dt);
-        const _second = 1000;
-        const _minute = _second * 60;
-        const _hour = _minute * 60;
-        const _day = _hour * 24;
-        let timer;
-
-        function showRemaining() {
-            const now = new Date();
-            const distance = end - now;
-            if (distance < 0) {
-                window.clearInterval(timer);
-                $(".exp").hide();
-                return;
-            }
-            const days = Math.floor(distance / _day);
-            const hours = Math.floor((distance % _day) / _hour);
-            const minutes = Math.floor((distance % _hour) / _minute);
-            const seconds = Math.floor((distance % _minute) / _second);
-
-            $(".exp span").html(days + ' дн. ' + hours + ' час. ' + minutes + ' мин. ' + seconds + ' сек.');
-            $(".exp").show();
-        }
-
-        timer = window.setInterval(showRemaining, 1000);
-    }
-
-    CountDownTimer('05/17/2022 00:00 AM');
-</script>
 <!-- .Codes -->
 
 </body>
