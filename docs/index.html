@@ -154,20 +154,20 @@
                     </li>
                 </ul>
                 <div style="text-align: center;">
-                    <a href="/img/scr/pmr.png" target="_blank" style="display: inline-block;" data-toggle="lightbox">
+                    <a href="/img/scr/pmr.png" target="_blank" style="display: inline-block;" class="lightbox-toggle">
                         <img src="/img/scr/pmr.png" width="565" height="412" class="img-responsive">
                     </a>
                     <br/>
                 </div>
                 <div style="text-align: center;">
                     <b>Другие скриншоты:</b><br/>
-                    <a target="_blank" href="/img/scr/stt_svr.png" data-toggle="lightbox">Настройка почтового сервера</a> |
-                    <a target="_blank" href="/img/scr/stt_spr.png" data-toggle="lightbox">Настройка спонсора</a><br/>
-                    <a target="_blank" href="/img/scr/stt_ptc.png" data-toggle="lightbox">Настройка PTC</a> |
-                    <a target="_blank" href="/img/scr/stt_aut.png" data-toggle="lightbox">Настройка автовхода</a><br/>
-                    <a target="_blank" href="/img/scr/get_ptc.png" data-toggle="lightbox">Сбор PTC ссылок</a> |
-                    <a target="_blank" href="/img/scr/read_mail.png" data-toggle="lightbox">Чтение почты</a> |
-                    <a target="_blank" href="/img/scr/stt_grp.png" data-toggle="lightbox">Группы приоритетов</a>
+                    <a target="_blank" href="/img/scr/stt_svr.png" class="lightbox-toggle">Настройка почтового сервера</a> |
+                    <a target="_blank" href="/img/scr/stt_spr.png" class="lightbox-toggle">Настройка спонсора</a><br/>
+                    <a target="_blank" href="/img/scr/stt_ptc.png" class="lightbox-toggle">Настройка PTC</a> |
+                    <a target="_blank" href="/img/scr/stt_aut.png" class="lightbox-toggle">Настройка автовхода</a><br/>
+                    <a target="_blank" href="/img/scr/get_ptc.png" class="lightbox-toggle">Сбор PTC ссылок</a> |
+                    <a target="_blank" href="/img/scr/read_mail.png" class="lightbox-toggle">Чтение почты</a> |
+                    <a target="_blank" href="/img/scr/stt_grp.png" class="lightbox-toggle">Группы приоритетов</a>
                 </div>
                 <br/>
                 <div style="text-align: center;"><b>Новое в версии 1.6.8 (Май 2008)</b></div>
@@ -268,6 +268,9 @@
     <div><img src="https://mc.yandex.ru/watch/35981665" style="position:absolute; left:-9999px;" alt=""/></div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
+<script>
+    document.querySelectorAll('.lightbox-toggle').forEach(el => el.addEventListener('click', Lightbox.initialize));
+</script>
 <!-- .Codes -->
 
 </body>
