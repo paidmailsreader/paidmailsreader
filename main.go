@@ -11,6 +11,10 @@ const response2 = "1t21Pz6tHt29uIt2ayHR6M8LKovW5fiddG+m0ds="
 func main() {
 	r := gin.Default()
 
+	r.GET("/", func(c *gin.Context) {
+		c.String(http.StatusOK, "PaidMailsReader key server is running!\nKEY: F1Z6S3L9Z4K9J3W9Z6K7D9B1A5G8")
+	})
+
 	r.GET("/control.php", func(c *gin.Context) {
 		c.Data(http.StatusOK, "application/json; charset=utf-8", []byte(response1))
 	})
